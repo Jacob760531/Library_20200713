@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_profile_photo.*
 
 class MainActivity : BaseActivity() {
 
@@ -19,6 +20,7 @@ class MainActivity : BaseActivity() {
     override fun setupEvents() {
 
         goToPhotoViewBtn.setOnClickListener {
+
             val myIntent = Intent(mContext, ProfilePhotoActivity::class.java)
             startActivity(myIntent)
 
@@ -26,7 +28,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
-        val imgUrl = "https://upload.wikimedia.org/wikipedia/commons/7/7d/IU_MelOn_Music_Awards_2017_06.jpg"
+        val imgUrl = "https://i.pinimg.com/originals/c8/14/99/c814995b86a60232c93492f5c90c0570.jpg"
         Glide.with(mContext).load(imgUrl).into(profileImg)
     }
 
