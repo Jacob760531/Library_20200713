@@ -17,11 +17,7 @@ class ProfilePhotoActivity : BaseActivity() {
 
     override fun setupEvents() {
 
-        goToPhotoViewBtn.setOnClickListener {
-            val myIntent = Intent(mContext, ProfilePhotoActivity::class.java)
-            startActivity(myIntent)
 
-        }
     }
 
     override fun setValues() {
